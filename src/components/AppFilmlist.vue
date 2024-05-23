@@ -1,13 +1,19 @@
 <template>
     <div class="w-full bg-[#1d1d1d] py-16">
         <div class="max-w-[1170px] w-full mx-auto flex flex-col">
-            <h2 class="text-5xl font-semibold text-center mb-12 mt-4 text-white section-header inter-font">Список фильмов</h2>
+            <h2 class="text-5xl font-semibold text-center mb-12 mt-4 text-white section-header inter-font">Список
+                фильмов</h2>
             <div class="grid grid-cols-6 justify-between">
-                <div v-for="film in films" :key="film.id" class="flex flex-col items-center justify-between mb-16 col-span-2 film-item">
+                <div v-for="film in films" :key="film.id"
+                    class="flex flex-col items-center justify-between mb-16 col-span-2 film-item">
                     <img class="w-48 mb-2" :src="film.img" :alt="film.name">
                     <h6 class="text-3xl text-center text-white inter-font font-medium mb-4">{{ film.name }}</h6>
-                    <a class="bg-white open-font font-normal text-lg rounded-2xl px-3 py-1 hover:bg-amber-400 hover:shadow-lg border-4 border-transparent hover:border-amber-500"
-                        :href="`/${film.id}`">Купить билет</a>
+                    <a class="relative bg-white open-font font-normal text-lg rounded-2xl px-3 py-1 hover:bg-amber-400 hover:shadow-lg border-4 border-transparent"
+                        :href="`/${film.id}`">
+                        Купить билет
+                        <span
+                            class="absolute inset-0 rounded-2xl bg-transparent border-4 border-amber-400 opacity-0 hover:opacity-75 hover:animate-impulse"></span>
+                    </a>
                 </div>
             </div>
         </div>
