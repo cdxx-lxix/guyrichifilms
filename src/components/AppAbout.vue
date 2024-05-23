@@ -1,8 +1,9 @@
 <template>
+    <div class="invisible" id="about"></div>
     <div class="max-w-[1170px] w-full mx-auto">
         <h2 class="block w-full text-center text-5xl font-bold my-16">О нас</h2>
         <swiper-container :space-between="spaceBetween" :centered-slides="true" navigation="true" pagination="true"
-            loop="true" id="about-us-slider">
+            loop="true" id="about-us-slider" style="--swiper-navigation-color: #d2d2d2; --swiper-pagination-color: #f4f4f4">
             <swiper-slide>
                 <div class="flex flex-col justify-center items-center mb-12">
                     <img :src="cinema" alt="cinema" class="object-contain w-1/2 mb-4">

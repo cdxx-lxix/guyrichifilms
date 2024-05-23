@@ -1,12 +1,14 @@
 <template>
-    <swiper-container :space-between="spaceBetween" :centered-slides="true" navigation="true" pagination="true" loop="true"
-        id="mySlider">
-        <swiper-slide v-for="film in films" :key="film.id">
-            <div class="relative">
-                <img class="w-full object-cover" :src="film.img" :alt="film.name">
-                <div class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center bg-gray-900/60">
+    <swiper-container :space-between="spaceBetween" :centered-slides="true" navigation="true" pagination="true"
+        loop="true" effect="fade" id="mySlider" style="--swiper-navigation-color: #d2d2d2; --swiper-pagination-color: #f4f4f4; height: 93svh; max-height: 93svh;">
+        <swiper-slide v-for="film in films" :key="film.id" style="height: 100%;">
+            <div class="relative h-full">
+                <img class="w-full h-full object-fill" :src="film.img" :alt="film.name">
+                <div
+                    class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center bg-gray-900/60">
                     <h2 class="text-white text-6xl font-bold mb-20">{{ film.name }}</h2>
-                    <a :href="`/${film.id}`" class="text-white text-lg font-semibold border-2 border-white px-3 py-1">Подробнее</a>
+                    <a :href="`/${film.id}`"
+                        class="text-white text-lg font-semibold border-2 border-white px-3 py-1">Подробнее</a>
                 </div>
             </div>
         </swiper-slide>
@@ -25,8 +27,13 @@ import f8 from '../assets/banner/f8.jpg'
 import f9 from '../assets/banner/f9.webp'
 import f10 from '../assets/banner/f10.jpeg'
 import f11 from '../assets/banner/f11.png'
+
 import { register } from 'swiper/element/bundle';
+import 'swiper/css/bundle'
+import 'swiper/css/navigation'
 register();
+
+
 const films = [
     { name: "Карты, деньги, два ствола", id: 0, img: f },
     { name: "Большой куш", id: 1, img: f2 },

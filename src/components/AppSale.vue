@@ -1,4 +1,5 @@
 <template>
+    <div class="invisible" id="sale"></div>
     <div class="w-full flex flex-col my-16">
         <div class="grid grid-cols-2 max-w-[1170px] w-full items-center justify-center mx-auto">
             <div class="w-full text-left inter-font">
