@@ -1,8 +1,8 @@
 <template>
     <div class="max-w-[1170px] w-full mx-auto mb-16">
-        <h2 class="w-full text-center font-semibold my-16 section-header special-h inter-font flex justify-between items-center">Наши
+        <h2 class="w-full text-center font-semibold my-8 lg:my-16 section-header special-h inter-font flex justify-between items-center">Наши
             контакты</h2>
-        <div class="w-full grid grid-cols-2">
+        <div class="w-full grid lg:grid-cols-2 p-10">
             <div class="flex flex-col gap-6 items-start text-xl font-light leading-normal inter-font">
 
                 <div class="flex flex-row justify-center items-center gap-6">
@@ -91,7 +91,7 @@
                         allguyritchiefilms@mail.ru
                     </p>
                 </div>
-                <div class="mt-20">
+                <div class="mt-4 mb-10 lg:mb-0 lg:mt-20">
                     <p>Приходите к нам  с 10:00 до 3:00</p>
                 </div>
             </div>

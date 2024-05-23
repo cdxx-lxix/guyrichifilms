@@ -3,10 +3,10 @@
         loop="true" effect="fade" id="mySlider" style="--swiper-navigation-color: #d2d2d2; --swiper-pagination-color: #f4f4f4; --swiper-pagination-bullet-inactive-color: #f1f1f1; height: 91svh; max-height: 91svh;">
         <swiper-slide v-for="film in films" :key="film.id" style="height: 100%;">
             <div class="relative h-full">
-                <img class="w-full h-full object-fill" :src="film.img" :alt="film.name">
+                <img class="w-full h-full object-cover md:object-fill" :src="film.img" :alt="film.name">
                 <div
                     class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center bg-gray-900/60">
-                    <h2 class="text-white text-6xl font-bold mb-20">{{ film.name }}</h2>
+                    <h2 class="text-white text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-20">{{ film.name }}</h2>
                     <RouterLink :to="`/${film.id}`"
                         class="text-white text-lg font-semibold border-2 border-white px-3 py-1 hover:bg-white hover:text-black">Подробнее</RouterLink>
                 </div>

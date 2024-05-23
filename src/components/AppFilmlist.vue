@@ -5,7 +5,7 @@
                 фильмов</h2>
             <div class="grid grid-cols-6 justify-between">
                 <div v-for="film in films" :key="film.id"
-                    class="flex flex-col items-center justify-between mb-16 col-span-2 film-item">
+                    class="flex flex-col items-center justify-between mb-16 col-span-6 md:col-span-3 lg:col-span-2 film-item">
                     <img class="w-48 mb-2" :src="film.img" :alt="film.name">
                     <h6 class="text-3xl text-center text-white inter-font font-medium mb-4">{{ film.name }}</h6>
                     <RouterLink class="relative bg-white open-font font-normal text-lg rounded-2xl px-3 py-1 hover:bg-amber-400 hover:shadow-lg border-4 border-transparent"

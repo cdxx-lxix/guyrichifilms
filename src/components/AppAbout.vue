@@ -7,7 +7,7 @@
             <swiper-slide>
                 <div class="flex flex-col justify-center items-center mb-12">
                     <img :src="cinema" alt="cinema" class="object-contain w-1/2 mb-4">
-                    <p class="text-center w-5/6 text-lg font-light">Добро пожаловать на сайт кинотеатра фильмов Гая
+                    <p class="text-center w-4/6 md:w-5/6 text-lg font-light">Добро пожаловать на сайт кинотеатра фильмов Гая
                         Ричи! Кинотеатр представляет собой уникальное
                         пространство, созданное вдохновением на фильмы и стиль режиссёра Гая Ричи. Расположенный в
                         сердце
@@ -19,7 +19,7 @@
             <swiper-slide>
                 <div class="flex flex-col justify-center items-center mb-12">
                     <img :src="hall" alt="hall" class="object-contain w-1/2 mb-4">
-                    <p class="text-center w-5/6 text-lg font-light">Добро пожаловать на сайт кинотеатра фильмов Гая
+                    <p class="text-center w-4/6 md:w-5/6 text-lg font-light">Добро пожаловать на сайт кинотеатра фильмов Гая
                         Ричи! Кинотеатр представляет собой уникальное
                         пространство, созданное вдохновением на фильмы и стиль режиссёра Гая Ричи. Расположенный в
                         сердце
