@@ -7,8 +7,8 @@
                 <div
                     class="absolute top-0 left-0 right-0 bottom-0 flex flex-col justify-center items-center bg-gray-900/60">
                     <h2 class="text-white text-6xl font-bold mb-20">{{ film.name }}</h2>
-                    <a :href="`/${film.id}`"
-                        class="text-white text-lg font-semibold border-2 border-white px-3 py-1">Подробнее</a>
+                    <RouterLink :to="`/${film.id}`"
+                        class="text-white text-lg font-semibold border-2 border-white px-3 py-1">Подробнее</RouterLink>
                 </div>
             </div>
         </swiper-slide>
@@ -16,6 +16,7 @@
 </template>
 
 <script setup>
+import { RouterLink } from 'vue-router'
 import f from '../assets/banner/f.jpg'
 import f2 from '../assets/banner/f2.jpg'
 import f3 from '../assets/banner/f3.jpg'

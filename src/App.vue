@@ -1,19 +1,13 @@
 <template>
   <AppHeader />
-  <AppBanner />
-  <AppSale />
-  <AppFilmlist />
-  <AppAbout />
-  <AppContacts />
+  <router-view>
+    
+  </router-view>
 </template>
 
 <script setup>
 import AppHeader from './components/AppHeader.vue';
-import AppBanner from './components/AppBanner.vue';
-import AppSale from './components/AppSale.vue';
-import AppFilmlist from './components/AppFilmlist.vue';
-import AppAbout from './components/AppAbout.vue';
-import AppContacts from './components/AppContacts.vue';
+import { RouterView } from 'vue-router'
 </script>
 
 <style>
