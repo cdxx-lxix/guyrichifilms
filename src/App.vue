@@ -20,4 +20,13 @@ import AppContacts from './components/AppContacts.vue';
 body {
   font-family: Helvetica,Arial,sans-serif;
 }
+
+.section-header {
+  font-size: 42px;
+  line-height: 120%;
+}
+
+.inter-font {
+  font-family: Inter, Arial;
+}
 </style>
