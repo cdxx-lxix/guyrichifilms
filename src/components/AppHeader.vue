@@ -4,7 +4,7 @@
             <RouterLink class="flex items-center space-x-3 select-none" to="/">
                 <span class="self-center text-2xl font-bold whitespace-nowrap">Фильмы Гая Ричи</span>
             </RouterLink>
-            <div class="items-center justify-between hidden w-full md:flex md:w-auto" id="user-menu">
+            <div class="items-center justify-center hidden w-full md:flex md:w-3/6 lg:w-4/6" id="user-menu">
                 <ul
                     class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 md:flex-row md:mt-0 md:border-0 md:bg-white">
                     <li>
@@ -21,7 +21,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center w-1/6 invisible md:visible">
+            <div class="flex items-center invisible md:visible">
                 <button type="button" @click="showModal"
                     class="relative inline-flex items-center p-3 text-sm font-medium text-center bg-transparent rounded-lg hover:animate-pulse">
                     <svg class="w-8 h-8" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg">
