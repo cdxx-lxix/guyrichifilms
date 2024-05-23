@@ -30,10 +30,10 @@
                             </div>
                             <div class="flex flex-row justify-start gap-3">
                                 <div class="flex flex-row justify-between gap-3 items-center">
-                                    <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-md"
+                                    <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-md duration-100 ease-in-out"
                                         @click="store.decreaseAmount(index)">-</button>
                                     <p>{{ film.amount }}</p>
-                                    <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-md"
+                                    <button class="w-10 h-10 bg-gray-200 hover:bg-gray-300 rounded-md duration-100 ease-in-out"
                                         @click="store.increaseAmount(index)">+</button>
                                 </div>
                                 <button
