@@ -52,7 +52,7 @@
 <script setup>
 import { useBasketStore } from '../stores/basket.js'
 const props = defineProps({
-    id: Number
+    id: String
 })
 
 const store = useBasketStore()

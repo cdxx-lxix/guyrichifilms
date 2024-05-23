@@ -45,9 +45,10 @@
                     <div class="w-full text-right">Сумма: <span class="font-semibold">{{ store.totalSum }}</span> руб.</div>
                     <div class="mb-5">
                         <label for="fio" class="block mb-2 font-bold text-xl">Данные для заказа</label>
-                        <input type="text" id="fio" name="fio"
+                        <input type="text" id="fio" name="fio" v-model="input"
                             class="bg-gray-100 border border-gray-200 text-sm rounded-lg block w-full px-3 py-4 outline-none focus:bg-gray-50 focus:shadow-sm"
-                            placeholder="ФИО" required>
+                            placeholder="ФИО" required pattern="^[A-Za-z\W\s\-]+$" form="confirm">
+                        <p class="text-sm text-gray-600/80 mt-1" :class="!validation ? 'visible' : 'invisible'">Неверные данные. Используйте только буквы.</p>
                     </div>
                     <div>
                         <div
@@ -78,7 +79,7 @@
                 </div>
 
                 <div class="flex justify-center p-4 md:p-5 rounded-b" v-if="store.basketItems.length">
-                    <button type="button" @click="showmodal = false"
+                    <button type="button" @click="createOrder"
                         class="text-white w-full bg-black font-light rounded-lg text-lg py-4 text-center">Оформить
                         заказ</button>
                 </div>
@@ -88,9 +89,29 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { useBasketStore } from '../stores/basket.js'
 const showmodal = defineModel('showmodal', { required: true })
-const total = ref(0)
+const input = ref("")
+const validation = ref(false)
+watch(input, (newValue) => {
+    const regexPattern = /^[A-Za-z\W\s\-]+$/;
+    validation.value = regexPattern.test(newValue)
+})
 const store = useBasketStore()
+
+const createOrder = () => {
+    if (validation.value) {
+        alert("Покупка совершена!")
+        store.clearBasket()
+    } else {
+        alert("Сначала надо правильно заполнить форму")
+    }
+}
 </script>
+
+<style scoped>
+input[type=text]:invalid {
+    @apply border-red-600;
+}
+</style>

@@ -15,7 +15,6 @@ import f11 from "../assets/posters/f11.jpg";
 export const useBasketStore = defineStore("basket", () => {
   const basketItems = ref([]);
   const addItem = (id) => {
-    console.log(basketItems.value);
     if (basketItems.value.some((el) => el.film.id == id)) {
       let temp = basketItems.value.findIndex((el) => el.film.id == id);
       increaseAmount(temp);
@@ -30,8 +29,8 @@ export const useBasketStore = defineStore("basket", () => {
 
   const decreaseAmount = (index) => {
     if (basketItems.value[index].amount <= 1) {
-        deleteItem(index)
-    };
+      deleteItem(index);
+    }
     return basketItems.value[index].amount--;
   };
 
@@ -40,8 +39,14 @@ export const useBasketStore = defineStore("basket", () => {
   };
 
   const totalSum = computed(() => {
-    return basketItems.value.reduce((accumulator, currentValue) => accumulator + (currentValue.amount * currentValue.film.price), 0);
+    return basketItems.value.reduce((accumulator, currentValue) => accumulator + currentValue.amount * currentValue.film.price, 0);
   });
+
+  const clearBasket = () => {
+    while(basketItems.value.length > 0) {
+        basketItems.value.pop();
+    }
+  };
 
   const films = [
     {
@@ -185,5 +190,6 @@ export const useBasketStore = defineStore("basket", () => {
     decreaseAmount,
     deleteItem,
     totalSum,
+    clearBasket,
   };
 });
