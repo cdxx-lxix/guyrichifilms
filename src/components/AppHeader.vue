@@ -21,7 +21,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="flex items-center w-1/6">
+            <div class="flex items-center w-1/6 invisible md:visible">
                 <button type="button" @click="showModal"
                     class="relative inline-flex items-center p-3 text-sm font-medium text-center bg-transparent rounded-lg hover:animate-pulse">
                     <svg class="w-8 h-8" viewBox="0 0 115 115" xmlns="http://www.w3.org/2000/svg">
@@ -34,10 +34,38 @@
                         {{ store.basketItems.length }}</div>
                 </button>
             </div>
+            <div class="flex items-center md:invisible visible">
+                <button type="button" @click="showMenu"
+                    class="relative inline-flex items-center p-3 text-sm font-medium text-center bg-transparent rounded-lg hover:animate-pulse">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" viewBox="0 0 448 448">
+                        <path d="M0 636.362h448v64H0zm0 160h448v64H0zm0 160h448v64H0z"
+                            transform="translate(0 -604.362)" />
+                    </svg>
+                </button>
+            </div>
         </div>
     </nav>
+    <div v-show="isMenu">
+        <div class="items-center justify-between w-full ">
+            <ul
+                class="flex flex-col font-medium p-4 text-center mt-4 border border-gray-100 rounded-lg bg-gray-50">
+                <li>
+                    <RouterLink to="/#about"
+                        class="block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 hover:bg-gray-600/30 duration-100 ease-in-out">
+                        О
+                        нас</RouterLink>
+                </li>
+                <li>
+                    <RouterLink to="/#sale"
+                        class="block py-2 px-4 text-gray-900 rounded hover:bg-gray-100 hover:bg-gray-600/30 duration-100 ease-in-out">
+                        Акции
+                    </RouterLink>
+                </li>
+            </ul>
+        </div>
+    </div>
     <AppBasket v-model:showmodal="isModal" />
-    <div class="fixed top-0 right-0 z-50 mt-16 mr-16 p-4 rounded-md shadow-md border border-gray-700/20 bg-gray-300/90 cursor-pointer"
+    <div class="fixed top-0 right-0 z-50 mt-24 mr-2 lg:mt-16 lg:mr-16 p-4 rounded-md shadow-md border border-gray-700/20 bg-gray-300/90 cursor-pointer"
         @click="showModal">
         <svg class="w-8 h-8 cart-ico" baseProfile="tiny" viewBox="0 0 24 24" xml:space="preserve"
             xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -63,6 +91,10 @@ const store = useBasketStore()
 const isModal = ref(false)
 const showModal = () => {
     isModal.value = !isModal.value
+}
+const isMenu = ref(false)
+const showMenu = () => {
+    isMenu.value = !isMenu.value
 }
 
 </script>
