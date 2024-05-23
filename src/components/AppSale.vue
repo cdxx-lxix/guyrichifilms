@@ -1,6 +1,6 @@
 <template>
     <div class="invisible" id="sale"></div>
-    <div class="max-w-[1170px] px-16">
+    <div class="max-w-[1170px] w-full mx-auto px-16">
         <div class="w-full flex flex-col my-16">
             <div class="grid md:grid-cols-2 max-w-[1170px] w-full items-center justify-center mx-auto">
                 <div class="w-full text-center md:text-left inter-font">
