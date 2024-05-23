@@ -26,6 +26,10 @@ body {
   line-height: 120%;
 }
 
+.open-font {
+  font-family: Open Sans, Arial;
+}
+
 .inter-font {
   font-family: Inter, Arial;
 }
