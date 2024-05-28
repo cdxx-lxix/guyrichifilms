@@ -51,6 +51,7 @@ export const useBasketStore = defineStore("basket", () => {
   const films = [
     {
       id: 0,
+      kinopoisk: 522,
       img: f,
       name: "Карты, деньги, два ствола",
       genre: "Боевик, Комедия, Криминал",
@@ -72,6 +73,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 1,
+      kinopoisk: 526,
       img: f2,
       name: "Большой куш",
       genre: "Криминал, Комедия, Боевик",
@@ -94,6 +96,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 2,
+      kinopoisk: 18973,
       img: f3,
       name: "Револьвер",
       genre: "Боевик, Триллер, Драма, Криминал, Детекив",
@@ -116,6 +119,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 3,
+      kinopoisk: 378140,
       img: f4,
       name: "Рок-н-рольщик",
       genre: "Криминал, Боевик, Триллер",
@@ -138,6 +142,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 4,
+      kinopoisk: 420923,
       img: f5,
       name: "Шерлок Холмс",
       genre: "Боевик, Приключения, Триллер, Драма",
@@ -160,6 +165,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 5,
+      kinopoisk: 474953,
       img: f6,
       name: "Шерлок Холмс: Игра теней",
       genre: "Боевик, Приключения, Триллер",
@@ -182,6 +188,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 6,
+      kinopoisk: 824437,
       img: f7,
       name: "Меч короля Артура",
       genre: "Фэнтези, Боевик, Драма, Приключения",
@@ -204,6 +211,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 7,
+      kinopoisk: 1007049,
       img: f8,
       name: "Алладин",
       genre: "Мюзкл, Фэнтези, Мелодрама, Комедия",
@@ -226,6 +234,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 8,
+      kinopoisk: 1143242,
       img: f9,
       name: "Джентельмены",
       genre: "Криминал, Комедия, Боевик",
@@ -248,6 +257,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 9,
+      kinopoisk: 1318972,
       img: f10,
       name: "Гнев человеческий",
       genre: "Боевик, Триллер",
@@ -270,6 +280,7 @@ export const useBasketStore = defineStore("basket", () => {
     },
     {
       id: 10,
+      kinopoisk: 927898,
       img: f11,
       name: "Переводчик",
       genre: "Боевик, Триллер, Военный, История, Драма",
