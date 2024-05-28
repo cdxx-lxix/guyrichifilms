@@ -118,9 +118,12 @@ const fetchKinopoiskData = async (kinopoiskID) => {
 };
 
 onMounted(async () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
     await fetchKinopoiskData(store.films[props.id].kinopoisk);
     kinopoiskRating.value = kinopoiskData.value.rating.kp
     kinopoiskRaters.value = kinopoiskData.value.votes.kp 
+
+
 });
 
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <nav class="bg-white border-gray-200">
+    <nav class="bg-white border-gray-200" id="navbar">
         <div class="max-w-[1170px] flex flex-wrap items-center justify-between mx-auto p-4">
             <RouterLink class="flex items-center space-x-3 select-none" to="/">
                 <span class="self-center text-2xl font-bold whitespace-nowrap">Фильмы Гая Ричи</span>
